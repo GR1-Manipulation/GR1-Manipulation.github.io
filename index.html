@@ -60,7 +60,7 @@
               Hongtao Wu<sup>*</sup>,
             </span>
             <span class="author-block">
-              Jiafeng Xu,
+              Jiafeng Xu<sup>*</sup>,
             </span>
             <span class="author-block">
               Kuankuan Sima,
@@ -74,7 +74,7 @@
               Qie Sima,
             </span>
               <span class="author-block">
-              Tao Kong,
+              Tao Kong
             </span>
           </div>
           <br>
@@ -125,19 +125,47 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/open_carbinet_drawer.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/open_left_door.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/open_right_door.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/rotate_tap.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/top_drawer.mp4"
+                    type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
-    <!-- /Paper video. -->
+  </div>
+</section>
 
+<section class="section">
+  <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -161,6 +189,18 @@
     </div>
     <!--/ Abstract. -->
 
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- /Paper video. -->
+
   </div>
 </section>
 
@@ -170,7 +210,9 @@
      <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
         <h2 class="title is-3">Visual-Force Imitation</h2>
-        <div class="content has-text-justified">
+        <img id="model" width="100%" src="static/images/framework.jpeg">
+        <h3 class="has-text-centered">
+          <div class="content has-text-justified">
           <p>
             We first collect expert trajectories for multiple tasks. The observation images of the expert data are
             converted to representation vectors by a visual encoder. In the rollout, the observation image is converted
@@ -178,9 +220,6 @@
             retrieving the actions from the expert data by comparing the similarity of the representation vectors.
             We use admittance whole-body control to control the robot.</p>
         </div>
-        <img id="model" width="100%" src="static/images/framework.jpeg">
-        <h3 class="has-text-centered">
-          <p style="font-family:Times New Roman"><b>We need a figure or GIF/MP4 here to show the method.</b></p>
         </h3>
 
       </div>
@@ -190,168 +229,20 @@
 
 
 <section class="section">
+  <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Results</h2>
+  </div>
   <div class="container is-max-desktop">
-    <!-- Results 1 -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-six-fifths">
-        <h2 class="title is-3">Results</h2>
-      <div class="columns is-centered">
-      <!--Visual-Force Imitation. -->
-      <div class="column">
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>With Visual-Force Imitation</p>
-            <video id="Open-left-door" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
+    <div class="columns is-centered">
+    <div class="column">
+      <div class="content">
+        <img id="model" width="100%" src="static/images/results.png">
       </div>
-      <!--/ Visual-Force Imitation. -->
-
-      <!-- Without Visual-Force Imitation. -->
-      <div class="column">
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>Without Visual-Force Imitation</p>
-            <video id="Open-cabinet-drawer" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-      <!--/ Without Visual-Force Imitation. -->
-
-       <!-- Joint torque results. -->
-      <div class="column">
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>Joint torque results</p>
-            <video id="Joint-torque-results" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-      <!--/ Joint torque results . -->
-
     </div>
     </div>
-    </div>
-    <!--/ Results 1 -->
-
-    <!-- Results 2 -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-six-fifths">
-      <div class="columns is-centered">
-      <!--Visual-Force Imitation. -->
-      <div class="column">
-        <div class="columns is-centered">
-          <div class="column content">
-            <video id="Open-left-doore" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-      <!--/ Visual-Force Imitation. -->
-
-      <!-- Without Visual-Force Imitation. -->
-      <div class="column">
-        <div class="columns is-centered">
-          <div class="column content">
-            <video id="Open-cabinet-drawer1" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-      <!--/ Without Visual-Force Imitation. -->
-
-       <!-- Joint torque results. -->
-      <div class="column">
-        <div class="columns is-centered">
-          <div class="column content">
-            <video id="Joint-torque-results2" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-      <!--/ Joint torque results . -->
-
-    </div>
-    </div>
-    </div>
-    <!--/ Results 2 -->
-
-    <!-- Results 3 -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-six-fifths">
-      <div class="columns is-centered">
-      <!--Visual-Force Imitation. -->
-      <div class="column">
-        <div class="columns is-centered">
-          <div class="column content">
-            <video id="Open-left-door3" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-      <!--/ Visual-Force Imitation. -->
-
-      <!-- Without Visual-Force Imitation. -->
-      <div class="column">
-        <div class="columns is-centered">
-          <div class="column content">
-            <video id="Open-cabinet-drawer4" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-      <!--/ Without Visual-Force Imitation. -->
-
-       <!-- Joint torque results. -->
-      <div class="column">
-        <div class="columns is-centered">
-          <div class="column content">
-            <video id="Joint-torque-results5" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-      <!--/ Joint torque results . -->
-
-    </div>
-    </div>
-    </div>
-    <!--/ Results 3 -->
-
-
-
   </div>
 </section>
+
 
 
 <section class="section" id="BibTeX">
