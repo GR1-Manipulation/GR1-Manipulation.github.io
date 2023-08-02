@@ -48,7 +48,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Visual-Force Imitation for Real-World Mobile Manipulation</h1>
+          <h1 class="title is-1 publication-title">MOMA-Force: Visual-Force Imitation for Real-World Mobile Manipulation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               Taozheng Yang<sup>*</sup>,
@@ -90,7 +90,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org"
+                <a href="static/paper/moma-force.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -109,7 +109,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/"
+                <a href="https://www.youtube.com/watch?v=emr8aDpLD5I"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -129,33 +129,39 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/open_carbinet_drawer.mp4"
+        <div class="item open_left_door_mute">
+          <video poster="" id="open_left_door_mute" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/open_left_door_mute.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/open_left_door.mp4"
+        <div class="item open_cabinet_drawer_mute">
+          <video poster="" id="open_cabinet_drawer_mute" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/open_cabinet_drawer_mute.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/open_right_door.mp4"
+        <div class="item open_right_door_mute">
+          <video poster="" id="open_right_door_mute" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/open_right_door_mute.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/rotate_tap.mp4"
+        <div class="item open_top_drawer_mute">
+          <video poster="" id="open_top_drawer_mute" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/open_top_drawer_mute.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/top_drawer.mp4"
+        <div class="item open_washing_machine_mute">
+          <video poster="" id="open_washing_machine_mute" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/open_washing_machine_mute.mp4.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item rotate_tap_mute">
+          <video poster="" id="rotate_tap_mute" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/rotate_tap_mute.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -171,19 +177,18 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            In this paper, we present a novel method for mobile manipulators to perform various contact-rich tasks,
-            which require a fusion of mobility and manipulation skills. While learning-based approaches have the
-            potential to generate actions in an end-to-end manner, they often suffer from insufficient action accuracy
-            and lack of robustness. On the other hand, classical control-based approaches can enhance system robustness
-            and predictability, but at the cost of extensive parameter tuning. To address these challenges, we propose
-            a method that seamlessly combines representation learning for perception, imitation learning for complex
-            manipulation motion generation, and admittance whole-body control for system robustness and controllability.
-            Our method, called visual-force imitation, enables multi-task learning of various contact-rich tasks on a
-            mobile manipulator. In a real household setting, our method outperforms baseline methods in terms of task
-            success rate. Moreover, our method achieves smaller contact force and force variance compared to the
-            baseline method without force imitation. Overall, we offer a promising approach for developing efficient
-            and robust mobile manipulators in the real world.</p>
+          <p>We present a novel method for mobile manipulators to perform multiple contact-rich manipulation tasks.
+            While learning-based methods have the potential to generate actions in an end-to-end manner, they often
+            suffer from insufficient action accuracy and robustness against noise. On the other hand, classical
+            control-based methods can enhance system robustness, but at the cost of extensive parameter tuning. To
+            address these challenges, we present MOMA-Force, a visualforce imitation method that seamlessly combines
+            representation learning for perception, imitation learning for complex motion generation, and admittance
+            whole-body control for system robustness and controllability. MOMA-Force enables a mobile manipulator to
+            learn multiple complex contact-rich tasks with high success rates and small contact forces. In a real
+            household setting, our method outperforms baseline methods in terms of task success rates. Moreover, our
+            method achieves smaller contact forces and smaller force variances compared to baseline methods without
+            force imitation. Overall, we offer a promising approach for efficient and robust mobile manipulation in
+            the real world.</p>
         </div>
       </div>
     </div>
@@ -194,7 +199,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com"
+          <iframe src="https://www.youtube.com/embed/emr8aDpLD5I"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -210,38 +215,61 @@
      <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
         <h2 class="title is-3">Visual-Force Imitation</h2>
-        <img id="model" width="100%" src="static/images/framework.jpeg">
         <h3 class="has-text-centered">
           <div class="content has-text-justified">
-          <p>
-            We first collect expert trajectories for multiple tasks. The observation images of the expert data are
-            converted to representation vectors by a visual encoder. In the rollout, the observation image is converted
-            to a representation vector with the same visual encoder. The action and target wrench are predicted by
-            retrieving the actions from the expert data by comparing the similarity of the representation vectors.
-            We use admittance whole-body control to control the robot.</p>
+          <p>The observation images of the expert data are converted to representation vectors by a visual encoder. In
+            the rollout, the observation image is converted to a representation vector with the same visual encoder.
+            The action and target wrench are predicted by retrieving the action and wrench of the expert data with
+            top-1 similarity of the representations. We use admittance whole-body control (a-WBC) to control the robot.
+          </p>
         </div>
         </h3>
-
+        <img id="framework" width="70%" src="static/images/framework.jpeg">
       </div>
     </div>
   </div>
 </section>
+
 
 
 <section class="section">
-  <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3">Results</h2>
-  </div>
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
-    <div class="column">
-      <div class="content">
-        <img id="model" width="100%" src="static/images/results.png">
+    <!-- main result -->
+     <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Results</h2>
+        <h3 class="has-text-centered">
+          <div class="content has-text-justified">
+          <p>MOMA-Force achieves the best average success rate among all the comparing baseline methods.
+            Compared to BC, MOMA-Force obtains a performance gain of 53.33% even though it performs multi-task learning
+            while BC performs single-task learning. Without force imitation, the success rate of MOMA-Force w/o FC
+            decreases by 28.3% on average. This method mainly struggles with tasks involving translation and rotation.
+          </p>
+        </div>
+        </h3>
+        <img id="main_result" width="100%" src="static/images/main_result.jpeg">
       </div>
     </div>
+    <!-- force -->
+     <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h3 class="has-text-centered">
+          <div class="content has-text-justified">
+          <p>With force imitation, the average absolute contact force and torque of MOMA-Force in x, y, and z-axes are
+            all smaller compared to those of the baseline methods without force imitation. In addition, MOMA-Force has
+            a smaller force variance, indicating less oscillation and more stable contact during the rollout.
+          </p>
+        </div>
+        </h3>
+        <img id="force" width="100%" src="static/images/force.jpeg">
+      </div>
     </div>
   </div>
 </section>
+
+
+
+
 
 
 
@@ -253,7 +281,7 @@
       author    = {Yang, Taozheng and Jing, Ya and Wu, Hongtao and Xu, Jiafeng and Sima, Kuankuan and Chen,
                   Guangzeng and Sima, Qie and Kong, Tao},
       title     = {Visual-Force Imitation for Real-World Mobile Manipulation},
-      booktitle = {2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+      booktitle = {2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
       year      = {2023}
     }
 </code></pre>
