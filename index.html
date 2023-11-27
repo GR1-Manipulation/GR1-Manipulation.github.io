@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Visual-Force Imitation for Real-World Mobile Manipulation.">
+        content="Unleashing Large-Scale Video Generative Pre-training for Visual Robot Manipulation.">
   <meta name="keywords" content="imitation learning, force-control, mobile manipulation, robots ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Visual-Force Imitation for Real-World Mobile Manipulation</title>
+  <title>Unleashing Large-Scale Video Generative Pre-training for Visual Robot Manipulation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -47,32 +47,35 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">MOMA-Force: Visual-Force Imitation for Real-World Mobile Manipulation</h1>
+          <h1 class="title is-1 publication-title">GR1: Unleashing Large-Scale Video Generative Pre-training for Visual Robot Manipulation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              Taozheng Yang<sup>*</sup>,
+              Hongtao Wu,
             </span>
             <span class="author-block">
-              Ya Jing<sup>*</sup>,
+              Ya Jing,
             </span>
             <span class="author-block">
-              Hongtao Wu<sup>*</sup>,
+              Chilam Cheang,
             </span>
-            <span class="author-block">
-              Jiafeng Xu<sup>*</sup>,
-            </span>
-            <span class="author-block">
-              Kuankuan Sima,
-            </span>
-          </div>
-          <div class="is-size-5 publication-authors">
             <span class="author-block">
               Guangzeng Chen,
             </span>
             <span class="author-block">
-              Qie Sima,
+              Jiafeng Xu,
             </span>
-              <span class="author-block">
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Xinghang Li,
+            </span>
+            <span class="author-block">
+              Minghuan Liu,
+            </span>
+            <span class="author-block">
+              Hang Li
+            </span>
+            <span class="author-block">
               Tao Kong
             </span>
           </div>
@@ -80,23 +83,10 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">ByteDance Research &nbsp;&nbsp;</span>
-            <span class="author-block"><sup>*</sup>Equal Contribution </span>
           </div>
-
-
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="static/paper/moma-force.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
               <span class="link-block">
                 <a href="https://arxiv.org"
                    class="external-link button is-normal is-rounded is-dark">
@@ -108,7 +98,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=emr8aDpLD5I"
+                <a href="https://www.youtube.com/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -128,39 +118,27 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item open_left_door_mute">
-          <video poster="" id="open_left_door_mute" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/open_left_door_720.mov"
+        <div class="item seen_1">
+          <video poster="" id="seen_1" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/demo/seen_1.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item open_cabinet_drawer_mute">
-          <video poster="" id="open_cabinet_drawer_mute" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/open_cabinet_drawer_720.mov"
+        <div class="item unseen_instance_2">
+          <video poster="" id="unseen_instance_2" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/demo/unseen_instance_2.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item open_right_door_mute">
-          <video poster="" id="open_right_door_mute" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/open_right_door_720.mov"
+        <div class="item unseen_category_1">
+          <video poster="" id="unseen_category_1" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/demo/unseen_category_1.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item open_top_drawer_mute">
-          <video poster="" id="open_top_drawer_mute" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/open_top_drawer_720.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item open_washing_machine_mute">
-          <video poster="" id="open_washing_machine_mute" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/open_washing_machine_720.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item rotate_tap_mute">
-          <video poster="" id="rotate_tap_mute" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/rotate_tap_720.mov"
+        <div class="item open_drawer">
+          <video poster="" id="open_drawer" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/demo/open_drawer.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -176,18 +154,13 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>We present a novel method for mobile manipulators to perform multiple contact-rich manipulation tasks.
-            While learning-based methods have the potential to generate actions in an end-to-end manner, they often
-            suffer from insufficient action accuracy and robustness against noise. On the other hand, classical
-            control-based methods can enhance system robustness, but at the cost of extensive parameter tuning. To
-            address these challenges, we present MOMA-Force, a visualforce imitation method that seamlessly combines
-            representation learning for perception, imitation learning for complex motion generation, and admittance
-            whole-body control for system robustness and controllability. MOMA-Force enables a mobile manipulator to
-            learn multiple complex contact-rich tasks with high success rates and small contact forces. In a real
-            household setting, our method outperforms baseline methods in terms of task success rates. Moreover, our
-            method achieves smaller contact forces and smaller force variances compared to baseline methods without
-            force imitation. Overall, we offer a promising approach for efficient and robust mobile manipulation in
-            the real world.</p>
+          <p>
+            Generative pre-trained models have demonstrated remarkable effectiveness in language and vision domains by learning useful representations. In this paper, we extend the scope of this effectiveness by showing that visual robot manipulation can significantly benefit from large-scale video generative pre-training. 
+             We introduce GR-1, a straightforward GPT-style model designed for multi-task language-conditioned visual robot manipulation.
+             GR-1 takes as inputs a language instruction, a sequence of observation images, and a sequence of robot states. It predicts robot actions as well as future images in an end-to-end manner. Thanks to a flexible design, GR-1 can be seamlessly finetuned on robot data after pre-trained on a large-scale video dataset.
+            We perform extensive experiments on the challenging CALVIN benchmark and a real robot. On CALVIN benchmark, our method outperforms state-of-the-art baseline methods and improves the success rate from 88.9% to 94.9%. When trained on 10% data of the full dataset, GR-1 achieves a success rate of 77.8%, while the best baseline method achieves 66.8%. In the zero-shot generalization setting, GR-1 improves the success rate from 53.3% to 85.4%. 
+            In real robot experiments, GR-1 also outperforms the comparing baseline method. We provide inaugural evidence that a unified GPT-style transformer, augmented with large-scale video generative pre-training, exhibits remarkable generalization to multi-task visual robot manipulation. Code will be made available.
+          </p>
         </div>
       </div>
     </div>
@@ -197,10 +170,6 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/emr8aDpLD5I"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
       </div>
     </div>
     <!-- /Paper video. -->
@@ -213,17 +182,15 @@
     <!-- Method -->
      <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
-        <h2 class="title is-3">Visual-Force Imitation</h2>
+        <h2 class="title is-3">Method</h2>
         <h3 class="has-text-centered">
           <div class="content has-text-justified">
-          <p>The observation images of the expert data are converted to representation vectors by a visual encoder. In
-            the rollout, the observation image is converted to a representation vector with the same visual encoder.
-            The action and target wrench are predicted by retrieving the action and wrench of the expert data with
-            top-1 similarity of the representations. We use admittance whole-body control (a-WBC) to control the robot.
+          <p>
+            TODO
           </p>
         </div>
         </h3>
-        <img id="framework" width="70%" src="static/images/framework.jpeg">
+        <img id="framework" width="70%" src="static/images/overview_rebuttal.jpg">
       </div>
     </div>
   </div>
@@ -239,156 +206,17 @@
         <h2 class="title is-3">Results</h2>
         <h3 class="has-text-centered">
           <div class="content has-text-justified">
-          <p>MOMA-Force achieves the best average success rate among all the comparing baseline methods.
-            Compared to BC, MOMA-Force obtains a performance gain of 53.33% even though it performs multi-task learning
-            while BC performs single-task learning. Without force imitation, the success rate of MOMA-Force w/o FC
-            decreases by 28.3% on average. This method mainly struggles with tasks involving translation and rotation.
+          <p>
+            TODO
           </p>
         </div>
         </h3>
-        <img id="main_result" width="100%" src="static/images/main_result.jpeg">
-      </div>
-    </div>
-    <!-- force -->
-     <div class="columns is-centered has-text-centered">
-      <div class="column is-six-fifths">
-        <h3 class="has-text-centered">
-          <div class="content has-text-justified">
-          <p>With force imitation, the average absolute contact force and torque of MOMA-Force in x, y, and z-axes are
-            all smaller compared to those of the baseline methods without force imitation. In addition, MOMA-Force has
-            a smaller force variance, indicating less oscillation and more stable contact during the rollout.
-          </p>
-        </div>
-        </h3>
-        <img id="force" width="100%" src="static/images/force.jpeg">
+        <img id="main_result" width="100%" src="">
       </div>
     </div>
   </div>
 </section>
 
-
-<section class="section">
-
-  <!-- open_right_door -->
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-
-      <!-- Behavior Cloning -->
-      <div class="column">
-        <div class="content">
-          <p>Behavior Cloning (BC)</p>
-          <video id="BC" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/comp/open_right_door_bc_720.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <!-- MOMA -->
-      <div class="column">
-        <div class="content">
-          <p>MOMA-Force w/o FC</p>
-          <video id="MOMA" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/comp/open_right_door_moma_720.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <!-- MOMA-Force -->
-      <div class="column">
-        <div class="content">
-          <p>MOMA-Force</p>
-          <video id="MOMA-Force" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/comp/open_right_door_moma_force_720.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-  <!-- open_right_door end -->
-
-  <!-- open_left_door -->
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-
-      <!-- Behavior Cloning -->
-      <div class="column">
-        <div class="content">
-          <video id="open_left_door_bc" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/comp/open_left_door_bc_720.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <!-- MOMA -->
-      <div class="column">
-        <div class="content">
-          <video id="open_left_door_moma" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/comp/open_left_door_moma_720.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <!-- MOMA-Force -->
-      <div class="column">
-        <div class="content">
-          <video id="open_left_door_moma_force" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/comp/open_left_door_moma_force_720.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-  <!-- open_left_door end -->
-
-  <!-- rotate_tap -->
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-
-      <!-- Behavior Cloning -->
-      <div class="column">
-        <div class="content">
-          <video id="rotate_tap_bc" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/comp/rotate_tap_bc_720.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <!-- MOMA -->
-      <div class="column">
-        <div class="content">
-          <video id="rotate_tap_moma" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/comp/rotate_tap_moma_720.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      <!-- MOMA-Force -->
-      <div class="column">
-        <div class="content">
-          <video id="rotate_tap_moma_force" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/comp/rotate_tap_moma_force_720.mov"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-  <!-- open_left_door end -->
-</section>
 
 <section class="section">
   <!-- Concurrent Work. -->
@@ -397,13 +225,7 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
         <div class="content has-text-justified">
-          <p>
-            <a href="https://explore-pretrain-robot.github.io">Exploring Visual Pre-training for Robot Manipulation: Datasets, Models and Methods</a>, IROS 2023
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2111.07832">iBOT: Image BERT Pre-Training with Online Tokenizer</a>, ICLR 2022
-          </p>
-
+          TODO
         </div>
       </div>
     </div>
@@ -419,13 +241,7 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
-    @inproceedings{yang2023visualforce
-      author    = {Yang, Taozheng and Jing, Ya and Wu, Hongtao and Xu, Jiafeng and Sima, Kuankuan and Chen,
-                  Guangzeng and Sima, Qie and Kong, Tao},
-      title     = {MOMA-Force: Visual-Force Imitation for Real-World Mobile Manipulation},
-      booktitle = {2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-      year      = {2023}
-    }
+    
 </code></pre>
   </div>
 </section>
