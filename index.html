@@ -47,7 +47,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">GR1: Unleashing Large-Scale Video Generative Pre-training for Visual Robot Manipulation</h1>
+          <h1 class="title is-1 publication-title">Unleashing Large-Scale Video Generative Pre-training for Visual Robot Manipulation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               Hongtao Wu,
@@ -73,7 +73,7 @@
               Minghuan Liu,
             </span>
             <span class="author-block">
-              Hang Li
+              Hang Li,
             </span>
             <span class="author-block">
               Tao Kong
@@ -118,27 +118,27 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item seen_1">
-          <video poster="" id="seen_1" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/seen_1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
         <div class="item unseen_instance_2">
           <video poster="" id="unseen_instance_2" autoplay controls muted loop playsinline height="100%">
             <source src="static/videos/demo/unseen_instance_2.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item unseen_category_1">
-          <video poster="" id="unseen_category_1" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/unseen_category_1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
         <div class="item open_drawer">
           <video poster="" id="open_drawer" autoplay controls muted loop playsinline height="100%">
             <source src="static/videos/demo/open_drawer.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item seen_1">
+          <video poster="" id="seen_1" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/demo/seen_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item unseen_category_1">
+          <video poster="" id="unseen_category_1" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/demo/unseen_category_1.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -155,11 +155,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Generative pre-trained models have demonstrated remarkable effectiveness in language and vision domains by learning useful representations. In this paper, we extend the scope of this effectiveness by showing that visual robot manipulation can significantly benefit from large-scale video generative pre-training. 
-             We introduce GR-1, a straightforward GPT-style model designed for multi-task language-conditioned visual robot manipulation.
-             GR-1 takes as inputs a language instruction, a sequence of observation images, and a sequence of robot states. It predicts robot actions as well as future images in an end-to-end manner. Thanks to a flexible design, GR-1 can be seamlessly finetuned on robot data after pre-trained on a large-scale video dataset.
-            We perform extensive experiments on the challenging CALVIN benchmark and a real robot. On CALVIN benchmark, our method outperforms state-of-the-art baseline methods and improves the success rate from 88.9% to 94.9%. When trained on 10% data of the full dataset, GR-1 achieves a success rate of 77.8%, while the best baseline method achieves 66.8%. In the zero-shot generalization setting, GR-1 improves the success rate from 53.3% to 85.4%. 
-            In real robot experiments, GR-1 also outperforms the comparing baseline method. We provide inaugural evidence that a unified GPT-style transformer, augmented with large-scale video generative pre-training, exhibits remarkable generalization to multi-task visual robot manipulation. Code will be made available.
+            Generative pre-trained models have demonstrated remarkable effectiveness in language and vision domains by learning useful representations. 
+            In this paper, we extend the scope of this effectiveness by showing that visual robot manipulation can significantly benefit from large-scale video generative pre-training. 
+            We introduce GR-1, a straightforward GPT-style model designed for multi-task language-conditioned visual robot manipulation.
+            GR-1 takes as inputs a language instruction, a sequence of observation images, and a sequence of robot states. 
+            It predicts robot actions as well as future images in an end-to-end manner.
+            Thanks to a flexible design, GR-1 can be seamlessly finetuned on robot data after pre-trained on a large-scale video dataset.
+            We perform extensive experiments on the challenging CALVIN benchmark and a real robot.
+            On CALVIN benchmark, our method outperforms state-of-the-art baseline methods and improves the success rate from 88.9% to 94.9%.
+            In the zero-shot generalization setting, GR-1 improves the success rate from 53.3% to 85.4%.
+            In real robot experiments, \ourmethod also outperforms baseline methods and shows strong potentials in generalization to unseen scenes and objects.
+            We provide inaugural evidence that a unified GPT-style transformer, augmented with large-scale video generative pre-training, exhibits remarkable generalization to multi-task visual robot manipulation. 
           </p>
         </div>
       </div>
@@ -183,14 +189,19 @@
      <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
         <h2 class="title is-3">Method</h2>
+        <img id="framework" width="70%" src="static/images/overview.jpg">
         <h3 class="has-text-centered">
           <div class="content has-text-justified">
           <p>
-            TODO
+            GR-1 is first pre-trained on the task of video prediction with a large-scale video dataset.
+            It is then finetuned on robot data to learn multi-task visual robot manipulation.
+            GR-1 is a simple GPT-style transformer which is able to take different modalities as inputs and outputs future images and actions.
+            The language input is encoded via CLIP text encoder.
+            Visual inputs are encoded via a vision transformer which has been pretrained with MAE.
+            Robot states, which contains the 6D pose of the robot end-effector and a binary status of the gripper, are encoded via a MLP.
           </p>
         </div>
         </h3>
-        <img id="framework" width="70%" src="static/images/overview_rebuttal.jpg">
       </div>
     </div>
   </div>
@@ -203,38 +214,67 @@
     <!-- main result -->
      <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
-        <h2 class="title is-3">Results</h2>
+        <h2 class="title is-3">Results on CALVIN Benchmark</h2>
+        <img id="calvin_result" width="70%" src="static/images/calvin_results.png">
         <h3 class="has-text-centered">
           <div class="content has-text-justified">
           <p>
-            TODO
+            [CALVIN](http://calvin.cs.uni-freiburg.de/) is a challenging benchmark fosuing on learning language-conditioned policy for long-horizon robot manipulation.
+            It contains 34 tasks and 4 different environments A, B, C, and D.
+            We perform experiments on CALVIN in four settings
+              1) Long-Horizon Multi-Task Learning 
+              2) Zero-Shot Generalization to Unseen Scenes 
+              3) Small Data 
+              4) Zero-Shot Generalization to Unseen Languages
+            
+            Long-Horizon Multi-Task Learning (ABCD->D)
+            In this setting, the robot is trained with data collected from environments A, B, C, and D and evaluated in environment D.
+            During the evaluation, the robot is instructed to perform 5 tasks in a row. 
+            This helps evaluate the capability of long-horizon multi-tasking.
+
+            Zero-Shot Generalization to Unseen Scenes (ABC->D)
+            The robot is trained with data collected from environment A, B, and C and evaluated in environment D, which is unseen during training.
+            
+            Small Data
+            Robot data is expensive.
+            To evaluate the capability of learning from small data, we sample 10% data from the training data of the ABCD->D split for training.
+            Specifically, we sampled 66 trajectories for each of the 34 tasks, i.e. 2244 trajectories in total.
+
+            Zero-Shot Generalization to Unseen Languages
+            We use GPT-4 to generate 50 synonymous instructions for each of the 34 tasks and randomly sampled from them during evaluation.
+
+            GR-1 showcases strong performance and outperforms the baseline methods in all four settings.
+            In particular, GR-1 shows powerful zero-shot generealization capability and possesses strong data efficiency.
           </p>
         </div>
         </h3>
-        <img id="main_result" width="100%" src="">
       </div>
     </div>
   </div>
 </section>
-
 
 <section class="section">
-  <!-- Concurrent Work. -->
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-        <div class="content has-text-justified">
-          TODO
+    <!-- main result -->
+     <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Results on Real Robot Experiments</h2>
+        <img id="robot_result" width="70%" src="static/images/real_robot.png">
+        <img id="robot_result" width="70%" src="static/images/real_robot_results.png">
+        <h3 class="has-text-centered">
+          <div class="content has-text-justified">
+          <p>
+          We also performs real robot experiments on object transportation and articulated object manipulation to evaluate how GR-1 works in the real world.
+          In object transportation, we evaluate on three settings: Seen Objects, Unseen Instances (unseen object instances of seen instances), and Unseen Categories (unseen objects of unseen categories).
+          GR-1 outperforms all the comparing baseline methods in all three settings.
+          In particular, the performance in Unseen Instances setting only drops from 79% to 73%.
+          </p>
         </div>
+        </h3>
       </div>
     </div>
   </div>
-  <!--/ Concurrent Work. -->
 </section>
-
-
-
 
 
 <section class="section" id="BibTeX">
