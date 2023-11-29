@@ -118,27 +118,54 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item unseen_instance_2">
-          <video poster="" id="unseen_instance_2" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/unseen_instance_2.mp4"
+        <div class="item transport_tomato">
+          <video poster="" id="transport_tomato" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/transport_tomato.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item open_drawer">
-          <video poster="" id="open_drawer" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/open_drawer.mp4"
+        <div class="item close_drawer">
+          <video poster="" id="close_drawer" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/close_drawer.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item seen_1">
-          <video poster="" id="seen_1" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/seen_1.mp4"
+        <div class="item transport_broccoli">
+          <video poster="" id="transport_broccoli" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/transport_broccoli.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item unseen_category_1">
-          <video poster="" id="unseen_category_1" autoplay controls muted loop playsinline height="100%">
-            <source src="static/videos/demo/unseen_category_1.mp4"
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item calvin_0">
+          <video poster="" id="calvin_0" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/calvin_0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item calvin_1">
+          <video poster="" id="calvin_1" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/calvin_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item calvin_2">
+          <video poster="" id="calvin_2" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/calvin_2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item calvin_3">
+          <video poster="" id="calvin_3" autoplay controls muted loop playsinline height="100%">
+            <source src="static/videos/calvin_3.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -171,7 +198,6 @@
       </div>
     </div>
     <!--/ Abstract. -->
-
   </div>
 </section>
 
@@ -231,11 +257,11 @@
             <br>
             <b>Small Data</b><br>
             Robot data is expensive.
-            To evaluate the capability of learning from small data, we sample 10% data from the training data of the ABCD->D split for training.
+            To evaluate the capability of learning from small data, we sampled 10% data from the training data of the ABCD->D split for training.
             Specifically, we sampled 66 trajectories for each of the 34 tasks, i.e. 2244 trajectories in total.<br>
             <br>
             <b>Zero-Shot Generalization to Unseen Languages</b><br>
-            We use GPT-4 to generate 50 synonymous instructions for each of the 34 tasks and randomly sampled from them during evaluation.<br>
+            We leveraged GPT-4 to generate synonymous instructions for each of the 34 tasks and used these unseen language instructions during evaluation.<br>
             <br>
             GR-1 showcases strong performance and outperforms the baseline methods in all four settings.
             In particular, GR-1 shows powerful zero-shot generealization capability and possesses strong data efficiency.<br>
@@ -259,10 +285,13 @@
           <div class="content has-text-justified">
           <br>
           <p>
-          We also performs real robot experiments on object transportation and articulated object manipulation to evaluate how GR-1 works in the real world.
-          In object transportation, we evaluate on three settings: Seen Objects, Unseen Instances (unseen object instances of seen instances), and Unseen Categories (unseen objects of unseen categories).
-          GR-1 outperforms all the comparing baseline methods in all three settings.
-          In particular, the performance in Unseen Instances setting only drops from 79% to 73%.
+          We also performed real robot experiments to evaluate how GR-1 works in the real world.
+          We first performed object transportation experiments.
+          We evaluated on three settings: Seen Objects, Unseen Instances (unseen object instances of seen instances), and Unseen Categories (unseen objects of unseen categories).
+          Example instructions include "put the broccoli onto the plate".
+          We also performed experiments on articulated object manipulation.
+          Example instructions include "open the drawer".
+          GR-1 outperforms baseline methods and showcase strong potentials in zero-shot generalization to unseen objects.
           </p>
         </div>
         </h3>
