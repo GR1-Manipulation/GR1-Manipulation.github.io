@@ -120,25 +120,25 @@
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item calvin_0">
           <video poster="" id="calvin_0" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/comp/4_ffmpeg.mp4"
+            <source src="static/videos/intro/calvin_0.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item calvin_1">
           <video poster="" id="calvin_1" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/comp/12_ffmpeg.mp4"
+            <source src="static/videos/intro/calvin_1.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item calvin_2">
           <video poster="" id="calvin_2" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/comp/14_ffmpeg.mp4"
+            <source src="static/videos/intro/calvin_2.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item calvin_3">
           <video poster="" id="calvin_3" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/comp/19_ffmpeg.mp4"
+            <source src="static/videos/intro/calvin_3.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -151,27 +151,27 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item calvin_0">
-          <video poster="" id="calvin_0" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/demo/close_drawer.mp4"
+        <div class="item real_0">
+          <video poster="" id="real_0" autoplay controls muted loop playsinline height="90%">
+            <source src="static/videos/intro/real_0.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item calvin_1">
-          <video poster="" id="calvin_1" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/demo/transport_broccoli.mp4"
+        <div class="item real_1">
+          <video poster="" id="real_1" autoplay controls muted loop playsinline height="90%">
+            <source src="static/videos/intro/real_1.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item calvin_2">
-          <video poster="" id="calvin_2" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/demo/transport_tomato.mp4"
+        <div class="item real_2">
+          <video poster="" id="real_2" autoplay controls muted loop playsinline height="90%">
+            <source src="static/videos/intro/real_2.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item calvin_3">
-          <video poster="" id="calvin_3" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/demo/transport eggplant.mp4"
+        <div class="item real_3">
+          <video poster="" id="real_3" autoplay controls muted loop playsinline height="90%">
+            <source src="static/videos/intro/real_3.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -197,7 +197,7 @@
             We perform extensive experiments on the challenging CALVIN benchmark and a real robot.
             On CALVIN benchmark, our method outperforms state-of-the-art baseline methods and improves the success rate from 88.9% to 94.9%.
             In the zero-shot generalization setting, GR-1 improves the success rate from 53.3% to 85.4%.
-            In real robot experiments, \ourmethod also outperforms baseline methods and shows strong potentials in generalization to unseen scenes and objects.
+            In real robot experiments, GR-1 also outperforms baseline methods and shows strong potentials in generalization to unseen scenes and objects.
             We provide inaugural evidence that a unified GPT-style transformer, augmented with large-scale video generative pre-training, exhibits remarkable generalization to multi-task visual robot manipulation. 
           </p>
         </div>
@@ -218,9 +218,9 @@
           <div class="content has-text-justified">
           <br>
           <p>
-            GR-1 is first pre-trained on the task of video prediction with a large-scale video dataset.
-            It is then finetuned on robot data to learn multi-task visual robot manipulation.
-            GR-1 is a simple GPT-style transformer which is able to take different modalities as inputs and outputs future images and actions.
+            GR-1 is first pre-trained on the task of <b>video prediction</b> with a large-scale video dataset.
+            It is then finetuned on robot data to learn <b>multi-task visual robot manipulation</b>.
+            GR-1 is a <b>simple GPT-style transformer</b> which is able to take different modalities as inputs and outputs future images and actions.
             The language input is encoded via CLIP text encoder.
             Visual inputs are encoded via a vision transformer which has been pretrained with MAE.
             Robot states, which contains the 6D pose of the robot end-effector and a binary status of the gripper, are encoded via a MLP.
