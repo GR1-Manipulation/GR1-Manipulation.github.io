@@ -119,25 +119,25 @@
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item calvin_0">
-          <video poster="" id="calvin_0" autoplay controls muted loop playsinline height="90%">
+          <video poster="" id="calvin_0" autoplay controls muted loop playsinline height="10%">
             <source src="static/videos/comp/4_ffmpeg.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item calvin_1">
-          <video poster="" id="calvin_1" autoplay controls muted loop playsinline height="90%">
+          <video poster="" id="calvin_1" autoplay controls muted loop playsinline height="10%">
             <source src="static/videos/comp/12_ffmpeg.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item calvin_2">
-          <video poster="" id="calvin_2" autoplay controls muted loop playsinline height="90%">
+          <video poster="" id="calvin_2" autoplay controls muted loop playsinline height="10%">
             <source src="static/videos/comp/14_ffmpeg.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item calvin_3">
-          <video poster="" id="calvin_3" autoplay controls muted loop playsinline height="90%">
+          <video poster="" id="calvin_3" autoplay controls muted loop playsinline height="10%">
             <source src="static/videos/comp/19_ffmpeg.mp4"
                     type="video/mp4">
           </video>
@@ -213,7 +213,7 @@
      <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
         <h2 class="title is-3">Method</h2>
-        <img id="framework" width="70%" src="static/images/overview.jpg">
+        <img id="framework" width="100%" src="static/images/overview.png">
         <h3 class="has-text-centered">
           <div class="content has-text-justified">
           <br>
@@ -240,7 +240,29 @@
      <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
         <h2 class="title is-3">Results on CALVIN Benchmark</h2>
-        <img id="calvin_result" width="70%" src="static/images/calvin_results.png">
+        <!-- <img id="calvin_result" width="70%" src="static/images/calvin_results.png">-->
+        <div class="columns">
+          <div class="column has-text-left">
+              <img src="static/images/ABCD_D.png" class="interpolation-image"
+           alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+          </div>
+
+          <div class="column has-text-left">
+              <img src="static/images/ABC_D.png" class="interpolation-image"
+           alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column has-text-left">
+              <img src="static/images/10_percent_data.png" class="interpolation-image"
+           alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+          </div>
+
+          <div class="column has-text-left">
+              <img src="static/images/unseen_lang.png" class="interpolation-image"
+           alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+          </div>
+        </div>
         <h3 class="has-text-centered">
           <div class="content has-text-justified">
           <p>
@@ -285,22 +307,26 @@
      <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
         <h2 class="title is-3">Results on Real Robot Experiments</h2>
-        <img id="robot_result" width="70%" src="static/images/real_robot.png">
-        <img id="robot_result" width="70%" src="static/images/real_robot_results.png">
-        <h3 class="has-text-centered">
-          <div class="content has-text-justified">
-          <br>
-          <p>
-          We also performed real robot experiments to evaluate how GR-1 works in the real world.
-          We first performed object transportation experiments.
-          We evaluated on three settings: Seen Objects, Unseen Instances (unseen object instances of seen instances), and Unseen Categories (unseen objects of unseen categories).
-          Example instructions include "put the broccoli onto the plate".
-          We also performed experiments on articulated object manipulation.
-          Example instructions include "open the drawer".
-          GR-1 outperforms baseline methods and showcase strong potentials in zero-shot generalization to unseen objects.
-          </p>
+        <img id="robot_result" width="100%" src="static/images/real_robot.png">
+        <!--<img id="robot_result" width="70%" src="static/images/real_robot_results.png">-->
+        <div class="columns">
+          <div class="column has-text-left">
+              <img src="static/images/real_results.png" class="interpolation-image"
+           alt="" style="display: block; margin-left: auto; margin-right: auto"/>
+          </div>
+
+          <div class="column has-text-left" style="padding-top: 25px;">
+            <p>
+              We also performed real robot experiments to evaluate how GR-1 works in the real world.
+              We first performed object transportation experiments.
+              We evaluated on three settings: Seen Objects, Unseen Instances (unseen object instances of seen instances), and Unseen Categories (unseen objects of unseen categories).
+              Example instructions include "put the broccoli onto the plate".
+              We also performed experiments on articulated object manipulation.
+              Example instructions include "open the drawer".
+              GR-1 outperforms baseline methods and showcase strong potentials in zero-shot generalization to unseen objects.
+            </p>
+          </div>
         </div>
-        </h3>
       </div>
     </div>
   </div>
