@@ -217,7 +217,7 @@
      <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
         <h2 class="title is-3">Method</h2>
-        <img id="framework" width="100%" src="static/images/overview.png">
+        <img id="framework" width="80%" src="static/images/overview.png">
         <h3 class="has-text-centered">
           <div class="content has-text-justified">
           <br>
@@ -244,6 +244,7 @@
      <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
         <h2 class="title is-3">CALVIN Benchmark Experiments</h2>
+        <img id="calvin_env" width="80%" src="static/images/calvin_env.png">
         <div class="content has-text-justified">
           <p>
           <a href="http://calvin.cs.uni-freiburg.de/"><b>CALVIN</b></a> is a challenging benchmark focusing on learning language-conditioned policy for long-horizon robot manipulation.
@@ -363,12 +364,55 @@
               The two scenes with disturbance are very challenging for the reason that 1) they are unseen during training and 2) there are objects with similar colors or shapes for confusion.
               GR-1 outperforms comparing baseline methods and achieve a high averaged success rate.
             </p>
+            <br>
           </div>
         </h3>
+
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item normal_0">
+              <video poster="" id="normal_0" autoplay controls muted loop playsinline height="90%">
+                <source src="static/videos/real_exp/normal_put_the_bell_pepper_onto_the_plate.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item distractors_0">
+              <video poster="" id="distractors_0" autoplay controls muted loop playsinline height="90%">
+                <source src="static/videos/real_exp/distractor_put_the_broccoli_onto_the_desk.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item bg_0">
+              <video poster="" id="bg_0" autoplay controls muted loop playsinline height="90%">
+                <source src="static/videos/real_exp/bg_put_the_bell_pepper_onto_the_plate.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item normal_1">
+              <video poster="" id="normal_1" autoplay controls muted loop playsinline height="90%">
+                <source src="static/videos/real_exp/normal_put_the_eggplant_onto_the_plate.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item distractors_1">
+              <video poster="" id="distractors_1" autoplay controls muted loop playsinline height="90%">
+                <source src="static/videos/real_exp/distractor_put_the_eggplant_onto_the_plate.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item bg_1">
+              <video poster="" id="bg_1" autoplay controls muted loop playsinline height="90%">
+                <source src="static/videos/real_exp/bg_put_the_eggplant_onto_the_desk.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
 
         <h3 class="has-text-centered">
           <div class="content has-text-justified">
             <p>
+              <br>
               <b>2. Unseen Instances & Unseen Categories Transportation</b><br>
               In these two setting, we challenge the robot to transport unseen objects.
               There are five objects in the scene, i.e. a broccoli, an eggplant, a bell pepper, a yellow peach and a tomato.
@@ -381,12 +425,47 @@
               This demostrate GR-1 possesses strong zero-shot generalization to unseen instances.
               In the most challenging setting of unseen categories, a typical failure mode is that GR-1 sometimes mixes up the bell pepper with the peach which has a similar color.
             </p>
+            <br>
           </div>
         </h3>
+
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item unseen_cat_0">
+
+              <video poster="" id="unseen_cat_0" autoplay controls muted loop playsinline height="90%">
+                <source src="static/videos/real_exp/unseen_cat_put_the_tomato_onto_the_plate.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item unseen_cat_1">
+
+              <video poster="" id="unseen_cat_1" autoplay controls muted loop playsinline height="90%">
+                <source src="static/videos/real_exp/unseen_cat_put_the_yellow_peach_onto_the_desk.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item unseen_inst_0">
+
+              <video poster="" id="unseen_inst_0" autoplay controls muted loop playsinline height="90%">
+                <source src="static/videos/real_exp/unseen_inst_put_the_bell_pepper_onto_the_plate.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+            <div class="item unseen_inst_1">
+
+              <video poster="" id="unseen_inst_1" autoplay controls muted loop playsinline height="90%">
+                <source src="static/videos/real_exp/unseen_inst_put_the_eggplant_onto_the_plate.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
 
         <h3 class="has-text-centered">
           <div class="content has-text-justified">
             <p>
+              <br>
               <b>3. Articulated Object Manipulation</b><br>
               In this experiment, we aim to evaluate GR-1 on handling contact-rich articulated object manipulation.
               We train GR-1 to open and close a drawer.
@@ -396,97 +475,21 @@
           </div>
         </h3>
 
+        <div class="container">
+          <video poster="" id="unseen_cat_0" autoplay controls muted loop playsinline width="33%" style="border-radius: 4%;">
+            <source src="static/videos/real_exp/open_the_drawer.mp4"
+                    type="video/mp4">
+          </video>
+          <video poster="" id="unseen_cat_0" autoplay controls muted loop playsinline width="33%" style="border-radius: 4%;">
+            <source src="static/videos/real_exp/close_the_drawer.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
       </div>
     </div>
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item normal_0">
-
-          <video poster="" id="normal_0" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/real_exp/normal_put_the_bell_pepper_onto_the_plate.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item normal_1">
-
-          <video poster="" id="normal_1" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/real_exp/normal_put_the_eggplant_onto_the_plate.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item distractors_1">
-
-          <video poster="" id="distractors_1" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/real_exp/distractor_put_the_broccoli_onto_the_desk.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item distractors_2">
-
-          <video poster="" id="distractors_2" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/real_exp/distractor_put_the_eggplant_onto_the_plate.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item bg_1">
-
-          <video poster="" id="bg_1" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/real_exp/bg_put_the_bell_pepper_onto_the_plate.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item bg_2">
-
-          <video poster="" id="bg_2" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/real_exp/bg_put_the_eggplant_onto_the_desk.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item unseen_cat_0">
-
-          <video poster="" id="unseen_cat_0" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/real_exp/unseen_cat_put_the_tomato_onto_the_plate.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item unseen_cat_1">
-
-          <video poster="" id="unseen_cat_1" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/real_exp/unseen_cat_put_the_yellow_peach_onto_the_desk.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item unseen_inst_0">
-
-          <video poster="" id="unseen_inst_0" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/real_exp/unseen_inst_put_the_bell_pepper_onto_the_plate.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item unseen_inst_1">
-
-          <video poster="" id="unseen_inst_1" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/real_exp/unseen_inst_put_the_eggplant_onto_the_plate.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <video poster="" id="unseen_cat_0" autoplay controls muted loop playsinline width="33%" style="border-radius: 4%;">
-        <source src="static/videos/real_exp/open_the_drawer.mp4"
-                type="video/mp4">
-      </video>
-      <video poster="" id="unseen_cat_0" autoplay controls muted loop playsinline width="33%" style="border-radius: 4%;">
-        <source src="static/videos/real_exp/close_the_drawer.mp4"
-                type="video/mp4">
-      </video>
-      <img width="33%" style="border-radius: 4%; border-style: solid; border-color: #d8d8d8;" src="static/images/none.png"/>
-    </div>
+    
+    
   </div>
 </section>
 
