@@ -243,7 +243,7 @@
     <!-- main result -->
      <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
-        <h2 class="title is-3">CALVIN Benchmark</h2>
+        <h2 class="title is-3">CALVIN Benchmark Experiments</h2>
         <div class="content has-text-justified">
           <p>
           <a href="http://calvin.cs.uni-freiburg.de/"><b>CALVIN</b></a> is a challenging benchmark focusing on learning language-conditioned policy for long-horizon robot manipulation.
@@ -323,10 +323,6 @@
             </p>
           </div>
         </h3>
-        
-        
-
-
       </div>
     </div>
   </div>
@@ -337,15 +333,16 @@
     <!-- main result -->
      <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
-        <h2 class="title is-3">Results on Real Robot Experiments</h2>
+        <h2 class="title is-3">Real Robot Experiments</h2>
         <img id="robot_result" width="100%" src="static/images/real_robot.png">
         <!--<img id="robot_result" width="70%" src="static/images/real_robot_results.png">-->
         <div class="column has-text-left" style="padding-top: 25px;">
           <p>
-            We also performed extensive real robot experiments to evaluate how GR-1 works in the real world.
-            We first evaluated on object transportation in three settings: Seen Objects, Unseen Instances (unseen object instances of seen instances), and Unseen Categories (unseen objects of unseen categories).
+            We perform extensive end-to-end real robot experiments to evaluate how GR-1 works in the real world.
+            We first evaluate on object transportation in three settings: Seen Objects, Unseen Instances (unseen object instances of seen instances), and Unseen Categories (unseen objects of unseen categories).
             Example instructions include "put the broccoli onto the plate".
-            We also performed experiments on articulated object manipulation.
+            This task is challenging as the robot needs to ground the correct object in the scene and successfully grasp and place it in the correct arean.
+            We also perform experiments on contact-rich articulated object manipulation.
             Example instructions include "open the drawer".
             Results are shown in the below figure.
           </p>
@@ -358,11 +355,43 @@
           <div class="content has-text-justified">
             <p>
               <b>1. Seen Object Transportation</b><br>
+              In this setting, there are three objects, i.e. a broccoli, an eggplant, and a bell pepper.
               The robot is trained to perform transporting one of the three objects from the plate to the table or vice versa.
-              In this setting, we evaluate the performance on transporting these three objects in 1) training scenes 2) scenes with distrators and 3) scenes with background changes and distrators.
+              We evaluate the performance on transporting these three objects in 1) training scenes 2) scenes with distrators and 3) scenes with background changes and distrators.
               In the scenes with distractors, we introduce three unseen objects, i.e., a corn, a tomato, and a yellow peach.
               In the scenes with background changes and distrators, we futher add a wooden board and an unseen bowl.
+              The two scenes with disturbance are very challenging for the reason that 1) they are unseen during training and 2) there are objects with similar colors or shapes for confusion.
+              GR-1 outperforms comparing baseline methods and achieve a high averaged success rate.
+            </p>
+          </div>
+        </h3>
 
+        <h3 class="has-text-centered">
+          <div class="content has-text-justified">
+            <p>
+              <b>2. Unseen Instances & Unseen Categories Transportation</b><br>
+              In these two setting, we challenge the robot to transport unseen objects.
+              There are five objects in the scene, i.e. a broccoli, an eggplant, a bell pepper, a yellow peach and a tomato.
+              While "broccoli", "eggplant", and "bell peper" are seen in the languages of the robot training data, these three instances are unseen.
+              We command the robot to transport these three instances in the Unseen Instances setting.
+              The yellow peach and the tomato are unseen in the languages of the robot training data.
+              The robot is instructed to transport these two objects in the Uneen Categories setting.
+              The performance of GR-1 drops when evaluted on unseen objects.
+              However, it is surprising that the drop for Unseen Instances is modest.
+              This demostrate GR-1 possesses strong zero-shot generalization to unseen instances.
+              In the most challenging setting of unseen categories, a typical failure mode is that GR-1 sometimes mixes up the bell pepper with the peach which has a similar color.
+            </p>
+          </div>
+        </h3>
+
+        <h3 class="has-text-centered">
+          <div class="content has-text-justified">
+            <p>
+              <b>3. Articulated Object Manipulation</b><br>
+              In this experiment, we aim to evaluate GR-1 on handling contact-rich articulated object manipulation.
+              We train GR-1 to open and close a drawer.
+              GR-1 outperforms the comparing baseline methods.
+              Typical failure modes of GR-1 include 1) failing to completely close the drawer in the closing task and 2) failing to engage with the drawer handle when pulling it out in the opening task.
             </p>
           </div>
         </h3>
@@ -371,6 +400,66 @@
   </div>
 </section>
 
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- main result -->
+     <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Ablation Studies and Video Prediction Results</h2>
+
+        <div class="column has-text-left" style="padding-top: 25px;">
+          <p>
+            GR-1 features video prediction and large-scale pretraining on video prediction.
+            We perform ablation studies to study how these two features influence the performance.
+            GR-1 outperforms the variant without pre-training and the variant without pre-training and video prediction in all experiments. 
+            We hypothesize that this is because the large-scale video pre-training helps GR-1 learn an accurate video prediction model which helps the robot understand what shall happen in future steps given the language instruction and previous observations. 
+            And this information acts as a strong signpost for the robot to generate pertinent actions for rolling out trajectories. 
+            Without pre-training, the video prediction of GR-1 w/o Video Pre-training may not be as robust.
+          </p>
+        </div>
+        <img id="robot_result" width="80%" src="static/images/ablation.png">
+        
+
+        <div class="column has-text-left" style="padding-top: 25px;">
+          <p>
+            We probe into GR-1 to investigate its video prediction performance on CALVIN and real robot data.
+            GR-1 is able to reconstruct the future frame correctly on both CALVIN data and real robot data, although some details (e.g. occluded objects) are missing. 
+            This video prediction signal can serve as a strong guide for action predictions.
+            More results can be found in the paper.
+          </p>
+        </div>
+
+
+        <img id="robot_result" width="80%" src="static/images/fwd_pred.png">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- main result -->
+     <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Conclusion</h2>
+        <div class="column has-text-left" style="padding-top: 25px;">
+          <p>
+            In this paper, we propose to leverage large-scale video generative pre-training for enhancing visual robot manipulation learning. 
+            We present GR-1, a strightforward GPT-style transformer that takes as input a language instruction, a sequence of observation images and robot states, and outputs actions and future images in an end-to-end manner. 
+            GR-1 is first pre-trained on language-conditioned video prediction with a large-scale video dataset. 
+            Owing to a flexible design, it can then be seamlessly finetuned on robot data to predict actions and future frames.
+            GR-1 shows strong performance in both simulation and real robot experiments.
+            By incorporating large-scale video data, we showcase that GR-1 is able to perform robustly in scenes which are disturbed heavily from those in the training data.
+            More importantly, GR-1 is able to generalize to unseen object instances and categories in a zero-shot manner.
+            In the future, we hope to incorporate more video data in training to further enhance the robustness and generalization capability of GR-1.
+            In addition, we plan to scale up the robot data by increasing both the number of robot trajectories in diverse environments and the number of manipulation skills.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
