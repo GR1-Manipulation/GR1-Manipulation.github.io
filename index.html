@@ -136,59 +136,62 @@
 </section>
 
 <section class="section">
-  <div class="columns is-centered has-text-centered">
-    <div class="container">
-      <video poster="" id="calvin_0" autoplay controls muted loop playsinline width="24%" style="border-radius: 4%;">
-        <source src="static/videos/intro/calvin_0.mp4"
-                type="video/mp4">
-      </video>
-      <video poster="" id="calvin_1" autoplay controls muted loop playsinline width="24%" style="border-radius: 4%;">
-        <source src="static/videos/intro/calvin_1.mp4"
-                type="video/mp4">
-      </video>
-      <video poster="" id="calvin_2" autoplay controls muted loop playsinline width="24%" style="border-radius: 4%;">
-        <source src="static/videos/intro/calvin_2.mp4"
-                type="video/mp4">
-      </video>
-      <video poster="" id="calvin_3" autoplay controls muted loop playsinline width="24%" style="border-radius: 4%;">
-        <source src="static/videos/intro/calvin_3.mp4"
-                type="video/mp4">
-      </video>
+  <div class="content has-text-justified">
+    <div class="columns is-centered has-text-centered">
+      <div class="container">
+        <video poster="" id="calvin_0" autoplay controls muted loop playsinline width="24%" style="border-radius: 4%;">
+          <source src="static/videos/intro/calvin_0.mp4"
+                  type="video/mp4">
+        </video>
+        <video poster="" id="calvin_1" autoplay controls muted loop playsinline width="24%" style="border-radius: 4%;">
+          <source src="static/videos/intro/calvin_1.mp4"
+                  type="video/mp4">
+        </video>
+        <video poster="" id="calvin_2" autoplay controls muted loop playsinline width="24%" style="border-radius: 4%;">
+          <source src="static/videos/intro/calvin_2.mp4"
+                  type="video/mp4">
+        </video>
+        <video poster="" id="calvin_3" autoplay controls muted loop playsinline width="24%" style="border-radius: 4%;">
+          <source src="static/videos/intro/calvin_3.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
     </div>
-  </div>
-  <div class="columns is-centered has-text-centered">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item unseen_cat_0">
-
-          <video poster="" id="unseen_cat_0" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/intro/3task_normal.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item unseen_cat_1">
-
-          <video poster="" id="unseen_cat_1" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/intro/3task_distractor.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item unseen_inst_1">
-
-          <video poster="" id="unseen_inst_1" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/intro/3task_unseen.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item unseen_inst_0">
-
-          <video poster="" id="unseen_inst_0" autoplay controls muted loop playsinline height="90%">
-            <source src="static/videos/real_exp/open_the_drawer.mp4"
-                    type="video/mp4">
-          </video>
+    <div class="columns is-centered has-text-centered">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item unseen_cat_0">
+  
+            <video poster="" id="unseen_cat_0" autoplay controls muted loop playsinline height="90%">
+              <source src="static/videos/intro/3task_normal.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item unseen_cat_1">
+  
+            <video poster="" id="unseen_cat_1" autoplay controls muted loop playsinline height="90%">
+              <source src="static/videos/intro/3task_distractor.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item unseen_inst_1">
+  
+            <video poster="" id="unseen_inst_1" autoplay controls muted loop playsinline height="90%">
+              <source src="static/videos/intro/3task_unseen.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item unseen_inst_0">
+  
+            <video poster="" id="unseen_inst_0" autoplay controls muted loop playsinline height="90%">
+              <source src="static/videos/real_exp/open_the_drawer.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 
   <div class="columns is-centered has-text-centered">
@@ -214,14 +217,14 @@
         <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
           <img id="framework" width="80%" style="display: block;margin-left: auto; margin-right: auto;" src="static/images/overview.png">
-          <p>
-            GR-1 is first pre-trained on the task of <b>video prediction</b> with a large-scale video dataset.
-            It is then finetuned on robot data to learn <b>multi-task visual robot manipulation</b>.
-            GR-1 is a <b>simple GPT-style transformer</b> which is able to take different modalities as inputs and outputs future images and actions.
-            The language input is encoded via CLIP text encoder.
-            Visual inputs are encoded via a vision transformer which has been pretrained with MAE.
-            Robot states, which contains the 6D pose of the robot end-effector and a binary status of the gripper, are encoded via an MLP.
-          </p>
+            <p>
+              GR-1 is first pre-trained on the task of <b>video prediction</b> with a large-scale video dataset.
+              It is then finetuned on robot data to learn <b>multi-task visual robot manipulation</b>.
+              GR-1 is a <b>simple GPT-style transformer</b> which is able to take different modalities as inputs and outputs future images and actions.
+              The language input is encoded via CLIP text encoder.
+              Visual inputs are encoded via a vision transformer which has been pretrained with MAE.
+              Robot states, which contains the 6D pose of the robot end-effector and a binary status of the gripper, are encoded via an MLP.
+            </p>
         </div>
       </div>
     </div>
