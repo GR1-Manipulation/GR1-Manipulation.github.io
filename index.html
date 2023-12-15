@@ -197,7 +197,7 @@
   <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
-          <p>
+          <p style="font-size: 24px;">
             Generative pre-trained models have demonstrated remarkable effectiveness in language and vision domains by learning useful representations. 
             In this paper, we extend the scope of this effectiveness by showing that <b> visual robot manipulation </b> can significantly benefit from <b>large-scale video generative pre-training</b>. 
             We introduce <b>GR-1</b>, a straightforward GPT-style model designed for multi-task language-conditioned visual robot manipulation.
@@ -217,7 +217,7 @@
         <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
           <img id="framework" width="80%" style="display: block;margin-left: auto; margin-right: auto;" src="static/images/overview.png">
-            <p>
+            <p  style="font-size: 24px;">
               GR-1 is first pre-trained on the task of <b>video prediction</b> with a large-scale video dataset.
               It is then finetuned on robot data to learn <b>multi-task visual robot manipulation</b>.
               GR-1 is a <b>simple GPT-style transformer</b> which is able to take different modalities as inputs and outputs future images and actions.
@@ -236,7 +236,7 @@
         <h2 class="title is-3">Real Robot Experiments</h2>
         <img id="robot_result" width="100%" src="static/images/real_robot.png">
         <div class="content has-text-justified">
-          <p>
+          <p style="font-size: 24px;">
             We perform extensive end-to-end real robot experiments to evaluate how GR-1 works in the real world.
             We first evaluate on object transportation in three settings: Seen Objects, Unseen Instances (unseen object instances of seen instances), and Unseen Categories (unseen objects of unseen categories).
             Example instructions include "put the broccoli onto the plate".
@@ -248,7 +248,7 @@
           <div class="columns is-centered has-text-centered">
             <img id="robot_result" width="40%" src="static/images/real_results.png"/>
           </div>
-          <p>
+          <p style="font-size: 24px;">
             <b>1. Seen Object Transportation</b><br>
             In this setting, there are three objects, i.e. a broccoli, an eggplant, and a bell pepper.
             The robot is trained to perform transporting one of the three objects from the plate to the table or vice versa.
@@ -305,7 +305,7 @@
               </div>
             </div>
           </div>
-          <p>
+          <p style="font-size: 24px;">
             <br>
             <b>2. Unseen Instances & Unseen Categories Transportation</b><br>
             In these two setting, we challenge the robot to transport unseen objects.
@@ -353,7 +353,7 @@
             </div>
           </div>
 
-          <p>
+          <p style="font-size: 24px;">
             <br>
             <b>3. Articulated Object Manipulation</b><br>
             In this experiment, we aim to evaluate GR-1 on handling contact-rich articulated object manipulation.
@@ -385,7 +385,7 @@
         <h2 class="title is-3">CALVIN Benchmark Experiments</h2>
         <div class="content has-text-justified">
           <img id="calvin_env" width="80%" src="static/images/calvin_env.png" style="display: block; margin-left: auto; margin-right: auto">
-          <p>
+          <p style="font-size: 24px;">
             <a href="http://calvin.cs.uni-freiburg.de/"><b>CALVIN</b></a> is a challenging benchmark focusing on learning language-conditioned policy for long-horizon robot manipulation.
             It contains 34 manipulation tasks and features unconstrained language instructions.
             The environment contains a Franka Emika Panda robot with a parallel-jaw gripper and a desk with a sliding door, a drawer that can be opened or closed, blocks with different colors, an LED and a light bulb that can be turned on or off.
@@ -430,7 +430,7 @@
              alt="" style="display: block; margin-left: auto; margin-right: auto"/>
             </div>
           </div>
-          <p>
+          <p style="font-size: 24px;">
             <b>3. Data Efficiency (10% ABCD->D)</b><br>
             Robot data is expensive.
             We want to understand how GR-1 performs when given a small amount of data.
@@ -466,7 +466,7 @@
         <h2 class="title is-3">Ablation Studies and Video Prediction Results</h2>
         <div class="content has-text-justified">
             <div class="column has-text-left" style="padding-top: 25px;">
-              <p>
+              <p style="font-size: 24px;">
                 GR-1 features video prediction and large-scale pretraining on video prediction.
                 We perform ablation studies to study how these two features influence the performance.
                 GR-1 outperforms the variant without pre-training and the variant without pre-training and video prediction in all experiments. 
@@ -492,7 +492,7 @@
             </div>
 
             <div class="column has-text-left" style="padding-top: 25px;">
-              <p>
+              <p style="font-size: 24px;">
                 We probe into GR-1 to investigate its video prediction performance on CALVIN and real robot data.
                 GR-1 is able to reconstruct the future frame correctly on both CALVIN data and real robot data, although some details (e.g. occluded objects) are missing. 
                 This video prediction signal can serve as a strong guide for action predictions.
@@ -512,7 +512,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Conclusion</h2>
         <div class="content has-text-justified">
-          <p>
+          <p style="font-size: 24px;">
             In this paper, we propose to leverage large-scale video generative pre-training for enhancing visual robot manipulation learning. 
             We present GR-1, a strightforward GPT-style transformer that takes as input a language instruction, a sequence of observation images and robot states, and outputs actions and future images in an end-to-end manner. 
             GR-1 is first pre-trained on language-conditioned video prediction with a large-scale video dataset. 
@@ -542,7 +542,7 @@
   <div class="container">
     <div class="columns is-centered">
         <div class="content">
-          <p>
+          <p style="font-size: 24px;">
             The website template was adapted from <a
               href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
           </p>
