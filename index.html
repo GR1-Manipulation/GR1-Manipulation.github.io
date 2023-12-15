@@ -204,7 +204,7 @@
             GR-1 takes as inputs a language instruction, a sequence of observation images, and a sequence of robot states. 
             It predicts robot actions as well as future images in <b> an end-to-end manner </b>.
             Thanks to a flexible design, GR-1 can be seamlessly finetuned on robot data after pre-trained on a large-scale video dataset.
-            We provide inaugural evidence that a unified GPT-style transformer, augmented with large-scale video generative pre-training, exhibits remarkable generalization to multi-task visual robot manipulation. 
+            We provide inaugural evidence that a unified GPT-style transformer, augmented with large-scale video generative pre-training, exhibits remarkable generalization to multi-task visual robot manipulation. <br>
           </p>
         </div>
       </div>
@@ -217,14 +217,16 @@
         <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
           <img id="framework" width="80%" style="display: block;margin-left: auto; margin-right: auto;" src="static/images/overview.png">
-            <p  style="font-size: 24px;">
-              GR-1 is first pre-trained on the task of <b>video prediction</b> with a large-scale video dataset.
-              It is then finetuned on robot data to learn <b>multi-task visual robot manipulation</b>.
-              GR-1 is a <b>simple GPT-style transformer</b> which is able to take different modalities as inputs and outputs future images and actions.
-              The language input is encoded via CLIP text encoder.
-              Visual inputs are encoded via a vision transformer which has been pretrained with MAE.
-              Robot states, which contains the 6D pose of the robot end-effector and a binary status of the gripper, are encoded via an MLP.
-            </p>
+          <br>
+          <br>
+          <p  style="font-size: 24px;">
+            GR-1 is first pre-trained on the task of <b>video prediction</b> with a large-scale video dataset.
+            It is then finetuned on robot data to learn <b>multi-task visual robot manipulation</b>.
+            GR-1 is a <b>simple GPT-style transformer</b> which is able to take different modalities as inputs and outputs future images and actions.
+            The language input is encoded via CLIP text encoder.
+            Visual inputs are encoded via a vision transformer which has been pretrained with MAE.
+            Robot states, which contains the 6D pose of the robot end-effector and a binary status of the gripper, are encoded via an MLP.
+          </p>
         </div>
       </div>
     </div>
@@ -236,6 +238,7 @@
         <h2 class="title is-3">Real Robot Experiments</h2>
         <img id="robot_result" width="100%" src="static/images/real_robot.png">
         <div class="content has-text-justified">
+          <br>
           <p style="font-size: 24px;">
             We perform extensive end-to-end real robot experiments to evaluate how GR-1 works in the real world.
             We first evaluate on object transportation in three settings: Seen Objects, Unseen Instances (unseen object instances of seen instances), and Unseen Categories (unseen objects of unseen categories).
@@ -248,6 +251,7 @@
           <div class="columns is-centered has-text-centered">
             <img id="robot_result" width="40%" src="static/images/real_results.png"/>
           </div>
+          <br>
           <p style="font-size: 24px;">
             <b>1. Seen Object Transportation</b><br>
             In this setting, there are three objects, i.e. a broccoli, an eggplant, and a bell pepper.
@@ -386,6 +390,7 @@
         <div class="content has-text-justified">
           <img id="calvin_env" width="80%" src="static/images/calvin_env.png" style="display: block; margin-left: auto; margin-right: auto">
           <p style="font-size: 24px;">
+            <br>
             <a href="http://calvin.cs.uni-freiburg.de/"><b>CALVIN</b></a> is a challenging benchmark focusing on learning language-conditioned policy for long-horizon robot manipulation.
             It contains 34 manipulation tasks and features unconstrained language instructions.
             The environment contains a Franka Emika Panda robot with a parallel-jaw gripper and a desk with a sliding door, a drawer that can be opened or closed, blocks with different colors, an LED and a light bulb that can be turned on or off.
@@ -445,7 +450,6 @@
             The success rates of tasks involving block manipulation decreases the most.
             These tasks are difficult because the robot needs to first grasp the correct block and then manipulate it according to the language instruction.
             <br>
-            <br>
             <b>4. Zero-Shot Generalization to Unseen Languages</b><br>
             Human languages are diverse, i.e., there are different ways of describing a task.
             We aim to test whether GR-1 is able to generalize to languages that are different from those seen in the training in this setting.
@@ -477,6 +481,7 @@
                 We hypothesize that this is because the large-scale video pre-training helps GR-1 learn an accurate video prediction model which helps the robot understand what shall happen in future steps given the language instruction and previous observations. 
                 And this information acts as a strong signpost for the robot to generate pertinent actions for rolling out trajectories. 
                 Without pre-training, the video prediction of GR-1 w/o Video Pre-training may not be as robust.
+                <br><br>
               </p>
             </div>
             <!--<img id="robot_result" width="80%" src="static/images/ablation.png">-->
@@ -502,6 +507,7 @@
                 This video prediction signal can serve as a strong guide for action predictions.
                 More results can be found in the paper.
               </p>
+              <br>
             </div>
 
 
