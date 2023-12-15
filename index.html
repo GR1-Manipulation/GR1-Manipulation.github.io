@@ -404,21 +404,25 @@
             </div>
           </div>
           <div class="content has-text-justified">
-            <b>1. Long-Horizon Multi-Task Learning (ABCD->D)</b> <br>
-            In this setting, the robot is trained with data collected from environments A, B, C, and D and evaluated in environment D.
-            During the evaluation, the robot aims to continuously solve up to 5 tasks by understanding a series of 5 language instructions in a row.
-            The robot receives the next task only if the current one is successfully completed.
-            GR-1 outperforms baseline methods in task success rates.
-            In particular, it improves the success rate of completing 5 tasks in a row from 38.3% to 73.1%.
-            Average length is the average number of completed task in a row of 5.
-            GR-1 improves average length from 3.06 to 4.21 showing strong capability in long-horizon multi-tasking.<br>
+            <b style="font-size: 24px;">1. Long-Horizon Multi-Task Learning (ABCD->D)</b> <br>
+            <p  style="font-size: 24px;">
+              In this setting, the robot is trained with data collected from environments A, B, C, and D and evaluated in environment D.
+              During the evaluation, the robot aims to continuously solve up to 5 tasks by understanding a series of 5 language instructions in a row.
+              The robot receives the next task only if the current one is successfully completed.
+              GR-1 outperforms baseline methods in task success rates.
+              In particular, it improves the success rate of completing 5 tasks in a row from 38.3% to 73.1%.
+              Average length is the average number of completed task in a row of 5.
+              GR-1 improves average length from 3.06 to 4.21 showing strong capability in long-horizon multi-tasking.<br>
+            </p>
           </div>
           <div class="content has-text-justified">
-            <b>2. Zero-Shot Generalization to Unseen Scenes (ABC->D)</b> <br>
-            In this setting, the robot is trained with data collected from environment A, B, and C and evaluated in environment D, which is unseen during training.
-            The robot needs to understand semantic information from the data collected in environment A, B, and C and generalize them to environment D.
-            GR-1 outperforms baseline methods by a large margin.
-            We hypothesize that the strong generalization capability stems from being exposed to large-scale data in pre-training.<br>
+            <b style="font-size: 24px;">2. Zero-Shot Generalization to Unseen Scenes (ABC->D)</b> <br>
+            <p  style="font-size: 24px;">
+              In this setting, the robot is trained with data collected from environment A, B, and C and evaluated in environment D, which is unseen during training.
+              The robot needs to understand semantic information from the data collected in environment A, B, and C and generalize them to environment D.
+              GR-1 outperforms baseline methods by a large margin.
+              We hypothesize that the strong generalization capability stems from being exposed to large-scale data in pre-training.<br>
+            </p>
           </div>
           <div class="columns">
             <div class="column has-text-left">
