@@ -198,12 +198,25 @@
         <div class="content is-centered has-text-justified">
           <p  style="font-size: 24px;">
             <br>
-            GR-1 is first pre-trained on the task of <b>video prediction</b> with a large-scale video dataset.
-            It is then finetuned on robot data to learn <b>multi-task visual robot manipulation</b>.
-            GR-1 is a <b>simple GPT-style transformer</b> which is able to take different modalities as inputs and outputs future images and actions.
+            GR-1 is first pre-trained on the task of video prediction with a large-scale video dataset.
+            It is then finetuned on robot data to learn multi-task visual robot manipulation.
+            GR-1 is a simple GPT-style transformer which is able to take different modalities as inputs and outputs future images and actions.
+            <br>
+          </p>
+        </div>
+        <div class="columns is-centered has-text-centered">
+            <img id="encoder_decoder" width="80%" src="static/images/encoder_decoder.png"/>
+        </div>
+        <div class="content is-centered has-text-justified">
+          <p  style="font-size: 24px;">
             The language input is encoded via CLIP text encoder.
             Visual inputs are encoded via a vision transformer which has been pretrained with MAE.
-            Robot states, which contains the 6D pose of the robot end-effector and a binary status of the gripper, are encoded via an MLP.
+            A perceiver resampler is used to reduce the token number.
+            Robot states, which contains the 6D pose of the robot end-effector and a binary status of the gripper, are encoded via linear layers.
+            Before being fed into the causal transformer, the embeddings of all modalities are passed through linear layers to align the dimension.
+            Future images are predicted with a transformer decoder consisting of self-attention blocks and MLPs.
+            Arm and gripper actions are predicted via linear layers.
+            More details can be found in the paper.
           </p>
         </div>
       </div>
@@ -227,7 +240,7 @@
             Results are shown in the below figure.
           </p>
           <div class="columns is-centered has-text-centered">
-            <img id="robot_result" width="35%" src="static/images/real_results.png"/>
+            <img id="robot_result" width="40%" src="static/images/real_results.png"/>
           </div>
           <br>
           <p style="font-size: 24px;">
